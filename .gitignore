@@ -1,0 +1,10 @@
+# directory
+/.venv
+/Dataset/resized
+/Dataset/Test Sample
+
+# files
+commands
+kaggle.json
+Lab6_Cats_v_Dogs.ipynb
+resize2square_data.py
