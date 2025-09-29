@@ -8,3 +8,8 @@ commands
 kaggle.json
 Lab6_Cats_v_Dogs.ipynb
 resize2square_data.py
+.gitignore
+.env
+README.template.md
+variables.yaml
+generate_readme.py
