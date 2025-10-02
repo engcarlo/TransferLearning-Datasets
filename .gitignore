@@ -1,7 +1,7 @@
 # directory
 /.venv
 /Dataset/resized
-/Dataset/Test Sample
+#/Dataset/Test Sample
 
 # files
 commands
@@ -13,3 +13,4 @@ resize2square_data.py
 README.template.md
 variables.yaml
 generate_readme.py
+classifier_from_little_data.py
