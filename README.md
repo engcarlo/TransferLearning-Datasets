@@ -23,8 +23,10 @@
     - [Prerequisites](#prerequisites)
     - [Installing Dependencies](#installing-dependencies)
   - [4. Usage Examples](#4-usage-examples)
-    - [Running the Jupyter Notebook](#running-the-jupyter-notebook)
-    - [Exploring the Notebook](#exploring-the-notebook)
+    - [Running the Jupyter Notebook for Transfer Learning](#running-the-jupyter-notebook-for-transfer-learning)
+      - [Exploring the Notebook](#exploring-the-notebook)
+    - [Running the Jupyter Notebook for Data Augmentation](#running-the-jupyter-notebook-for-data-augmentation)
+      - [Exploring the Notebook](#exploring-the-notebook-1)
   - [5. Repository File/Directory Structure](#5-repository-filedirectory-structure)
     - [Project Files](#project-files)
   - [6. Project Roadmap](#6-project-roadmap)
@@ -119,7 +121,9 @@ By the end of the notebook, you will see a significant performance improvement i
 By comparing the two approaches, this notebook clearly illustrates the power of transfer learning. You will observe a significant improvement in classification accuracy (~80% or higher) with the VGG16-based model compared to the CNN trained from scratch (~50%), highlighting why this technique is a cornerstone of modern computer vision.
 
 
-### Running the Jupyter Notebook
+### Running the Jupyter Notebook for Transfer Learning 
+
+Direct Link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/engcarlo/TransferLearning-Datasets/blob/main/M2_transfer_learning.ipynb)
 
 To open the main transfer learning notebook, run the following command from the project root directory:
 
@@ -142,7 +146,7 @@ The execution flow inside of notebook:
 5. Evaluating the results.
 
 
-### Exploring the Notebook
+#### Exploring the Notebook
 
 The `M2_transfer_learning.ipynb` notebook data organization:
 
@@ -158,6 +162,46 @@ The `M2_transfer_learning.ipynb` notebook data organization:
 
   - __Images (`x_train`):__ The input images are processed into a 4D tensor with the shape `(number_of_images, 224, 224, 3)`, where `224x224` is the image resolution required by VGG16 and `3` represents the RGB color channels.
   - __Labels (`y_train`):__ The corresponding labels are one-hot encoded into a 2D tensor with the shape `(number_of_images, num_classes)`, which will be `(number_of_images, 2)` for this dataset.
+
+
+### Running the Jupyter Notebook for Data Augmentation
+
+Direct Link: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/engcarlo/TransferLearning-Datasets/blob/main/DataAug-App.ipynb) 
+
+To apply data augmentation techniques, you can use the `DataAug-App.ipynb` notebook. This notebook provides a hands-on environment for generating augmented images from a sample file.
+
+To get started, run the following command from the project's root directory:
+```bash
+jupyter notebook DataAug-App.ipynb
+```
+This will open the notebook in your web browser, allowing you to interact with the code and visualize the augmentation process.
+
+#### Exploring the Notebook
+
+The `DataAug-App.ipynb` notebook is designed to be interactive and educational. Here’s a breakdown of its key components:
+- __Data Augmentation Function:__ The core of the notebook is the `augment_image` function, which takes an input image and applies a series of random transformations based on your settings.
+
+- __Configurable Parameters:__ You can customize the data augmentation process through two main sets of parameters:
+
+  - __Data Generation (`datagen`):__ Control the types of transformations applied, such as:
+
+    - `rotation_range`: Randomly rotate images.
+    - `width_shift_range` & `height_shift_range`: Shift images horizontally or vertically.
+    - `shear_range`: Apply shearing transformations.
+    - `zoom_range`: Randomly zoom into images.
+    - `horizontal_flip` & `vertical_flip`: Flip images along their axes.
+
+  - __File and Image Settings (`setupgen`):__ Configure the output and processing settings, including:
+
+    - `Target Size`: Define the output dimensions of the generated images.
+    - `Save Directory`: Specify the folder where augmented images will be saved.
+    - `Number of Generations`: Set how many augmented versions of the image to create.
+    - `File Format`: Choose the output format (e.g., `jpg`, `png`).
+
+- __Live Examples:__ The notebook includes example cells that demonstrate how to use the function and visualize the results, making it easy to experiment with different augmentation strategies.
+
+
+
 
 ---
 
