@@ -22,7 +22,7 @@
     - [Cloning the Repository](#cloning-the-repository)
     - [Prerequisites](#prerequisites)
     - [Installing Dependencies](#installing-dependencies)
-  - [Directory and Files Schema](#directory-and-files-schema)
+    - [Directory and Files Schema](#directory-and-files-schema)
     - [Project Files](#project-files)
   - [4. Usage Examples](#4-usage-examples)
     - [Running the Jupyter Notebook for Transfer Learning](#running-the-jupyter-notebook-for-transfer-learning)
@@ -104,7 +104,7 @@ Navigate into the cloned directory and install the necessary Python packages. Wh
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-## Directory and Files Schema
+### Directory and Files Schema
 
 The present jupyter notebook assume the following layout (ex.: after cloning '"TransferLearning-Datasets"'):
 
