@@ -22,16 +22,16 @@
     - [Cloning the Repository](#cloning-the-repository)
     - [Prerequisites](#prerequisites)
     - [Installing Dependencies](#installing-dependencies)
+  - [Directory and Files Schema](#directory-and-files-schema)
+    - [Project Files](#project-files)
   - [4. Usage Examples](#4-usage-examples)
     - [Running the Jupyter Notebook for Transfer Learning](#running-the-jupyter-notebook-for-transfer-learning)
       - [Exploring the Notebook](#exploring-the-notebook)
     - [Running the Jupyter Notebook for Data Augmentation](#running-the-jupyter-notebook-for-data-augmentation)
       - [Exploring the Notebook](#exploring-the-notebook-1)
-  - [5. Repository File/Directory Structure](#5-repository-filedirectory-structure)
-    - [Project Files](#project-files)
-  - [6. Project Roadmap](#6-project-roadmap)
-  - [7. Contribution Guidelines](#7-contribution-guidelines)
-  - [8. License](#8-license)
+  - [5. Project Roadmap](#5-project-roadmap)
+  - [6. Contribution Guidelines](#6-contribution-guidelines)
+  - [7. License](#7-license)
 
 
 ---
@@ -104,7 +104,35 @@ Navigate into the cloned directory and install the necessary Python packages. Wh
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+## Directory and Files Schema
 
+The present jupyter notebook assume the following layout (ex.: after cloning '"TransferLearning-Datasets"'):
+
+```sh
+TransferLearning-Datasets/ # Main repository
+├─Dataset/                 # Dataset directory
+│   ├─Cats/
+│   │  ├─ 1.jpg
+│   │  └─ ...
+│   └─Dogs/
+│      ├─ 1.jpg
+│      └─ ...
+├─models/                   # Saved trained models and checkpoint
+└─outputs/                  # Results, metrics and graphs
+```
+
+###  Project Files
+
+```sh
+M2_transfer_learning.ipynb   # Notebook with Transfer Learning flow analysis
+DataAug-App.ipynb            # Notebook to apply data augmentation
+README.md                    # Project documentation
+```
+
+
+In Dataset directory, each subdir represents one class/category. The directories' names (Cats, Dogs, etc...) are used to build the categories automatically.
+ 
+ 
 ---
 ## 4. Usage Examples
 
@@ -200,41 +228,8 @@ The `DataAug-App.ipynb` notebook is designed to be interactive and educational. 
 
 - __Live Examples:__ The notebook includes example cells that demonstrate how to use the function and visualize the results, making it easy to experiment with different augmentation strategies.
 
-
-
-
 ---
-
-## 5. Repository File/Directory Structure
-
-The present jupyter notebook assume the following layout (ex.: after cloning '"TransferLearning-Datasets"'):
-
-```sh
-TransferLearning-Datasets/ # Main repository
-├─Dataset/                 # Dataset directory
-│   ├─Cats/
-│   │  ├─ 1.jpg
-│   │  └─ ...
-│   └─Dogs/
-│      ├─ 1.jpg
-│      └─ ...
-├─models/                   # Saved trained models and checkpoint
-└─outputs/                  # Results, metrics and graphs
-```
-
-###  Project Files
-
-```sh
-M2_transfer_learning.ipynb   # Notebook with Transfer Learning flow analysis
-DataAug-App.ipynb            # Notebook to apply data augmentation
-README.md                    # Project documentation
-```
-
-
-In Dataset directory, each subdir represents one class/category. The directories' names (Cats, Dogs, etc...) are used to build the categories automatically.
- 
----
-## 6. Project Roadmap
+## 5. Project Roadmap
 
 Future implementation for `TransferLearning-Datasets` includes continuous improvement and expansion:
 
@@ -247,7 +242,7 @@ Future implementation for `TransferLearning-Datasets` includes continuous improv
 
 ---
 
-##  7. Contribution Guidelines
+##  6. Contribution Guidelines
 
 Feel free to contribute for `TransferLearning-Datasets` repository! To ensure a smooth collaboration, please follow these guidelines:
 
@@ -297,7 +292,7 @@ git push origin feature/add-resnet-model
 
 ---
 
-## 8. License
+## 7. License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE)📜 file for more details.
 
